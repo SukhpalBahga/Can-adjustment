@@ -1,0 +1,372 @@
+def find(dict, int):
+    return (dict[int])
+
+
+
+
+def main():
+    single = 2000
+    cans6add = 0
+    cans8add = 0
+    cans12add = 0
+    cansminus12 = 0
+    cansminus = 0
+
+
+    CanId = input("Enter Number For 24 or 36 cans 15 cans or 12 cans :")
+
+
+    if (combinedCans[CanId][0] == 36):
+        cansminus = int(input(
+            "Enter the Number of {} of 36 cans minus:".format(combinedCans[CanId][1])))
+    elif (combinedCans[CanId][0] == 24):
+        cansminus = int(input(
+            "Enter the Number of {} of 24 cans minus:".format(combinedCans[CanId][1])))
+    elif (combinedCans[CanId][0] == 15):
+        cansminus = int(input(
+            "Enter the Number of {} of 15 cans minus:".format(combinedCans[CanId][1])))
+    elif (combinedCans[CanId][0] == 12):
+        cansminus12 = int(input(
+            "Enter the Number of {} of 12 cans minus:".format(combinedCans[CanId][1])))
+    cans12add = 0
+    cans8add = 0
+    cans6add = 0
+    can1add = 0
+    canDif = 0
+
+
+    name = eval(combinedCans[CanId][1])
+    canAmmountCalculated = (
+        combinedCans[CanId][0] * int(cansminus + cansminus12))
+    canAmmount = ((cans6add * 6) + (cans8add * 8) +
+                  (cans12add * 12) + (can1add))
+    canDif = (canAmmountCalculated - canAmmount)
+
+
+    x3 = 0
+    x2 = 0
+
+
+    if 12 in name and int(combinedCans[CanId][0]) != 12:
+        print(combinedCans[CanId][0])
+        print(canAmmountCalculated)
+        cans12add = int(input(
+            "Enter Number of 12 of {} added:".format(combinedCans[CanId][1])))
+    canAmmount = ((cans6add * 6) + (cans8add * 8) +
+                  (cans12add * 12) + (can1add))
+    canDif = (canAmmountCalculated - canAmmount)
+
+
+    if 8 in name and canDif != 0:
+        cans8add = int(
+            input("Enter Number of 8 of {} added:".format(combinedCans[CanId][1])))
+    canAmmount = ((cans6add * 6) + (cans8add * 8) +
+                  (cans12add * 12) + (can1add))
+    canDif = (canAmmountCalculated - canAmmount)
+
+
+    if 6 in name and canDif != 0:
+        cans6add = int(
+            input("Enter Number of 6 of {} added:".format(combinedCans[CanId][1])))
+
+
+    canAmmount = ((cans6add * 6) + (cans8add * 8) +
+                  (cans12add * 12) + (can1add))
+    canDif = (canAmmountCalculated - canAmmount)
+
+
+    if canDif != 0:
+        can1add = int(input("Enter Number of 1 of {} added:".format(
+            combinedCans[CanId][1])))
+
+
+    if (combinedCans[CanId][0] == 36):
+        print(
+            f'minus {cansminus}, {combinedCans[CanId][0]} cans, {combinedCans[CanId][1]}, with Barcode: {CanId}')
+
+
+    if (combinedCans[CanId][0] == 24):
+        print(
+            f'minus {cansminus}, {combinedCans[CanId][0]} cans, {combinedCans[CanId][1]}, with Barcode: {CanId}')
+
+
+    if (combinedCans[CanId][0] == 15):
+        print(
+            f'minus {cansminus}, {combinedCans[CanId][0]} cans, {combinedCans[CanId][1]}, with Barcode: {CanId}')
+
+
+    if (combinedCans[CanId][0] == 12):
+        print(
+            f'minus {cansminus}, {combinedCans[CanId][0]} cans, {combinedCans[CanId][1]}, with Barcode: {CanId}')
+
+
+    # match combinedCans[CanId][1]:
+    #     case "bud":
+    #         x1 = find(bud, 6)
+    #         x2 = find(bud, 8)
+    #         x3 = find(bud, 12)
+    #     case "budlight":
+
+
+    if (combinedCans[CanId][1] == "bud"):
+        x1 = find(bud, 6)
+        x2 = find(bud, 8)
+        x3 = find(bud, 12)
+
+
+    elif (combinedCans[CanId][1] == "budlight"):
+        x1 = find(budlight, 6)
+        x2 = find(budlight, 8)
+
+
+    elif (combinedCans[CanId][1] == "agd"):
+        x1 = find(agd, 6)
+
+
+    elif (combinedCans[CanId][1] == "americanVintage"):
+        x1 = find(americanVintage, 6)
+
+
+    elif (combinedCans[CanId][1] == "blackice"):
+        x1 = find(blackice, 6)
+        x2 = find(blackice, 8)
+
+
+    elif (combinedCans[CanId][1] == "bowValley"):
+        x1 = find(bowValley, 6)
+
+
+    elif (combinedCans[CanId][1] == "bowValleyStrong"):
+        x1 = find(bowValleyStrong, 6)
+
+
+    elif (combinedCans[CanId][1] == "brava"):
+        x2 = find(brava, 8)
+
+
+    elif (combinedCans[CanId][1] == "budZero"):
+        x1 = find(budZero, 6)
+
+
+    elif (combinedCans[CanId][1] == "busch"):
+        x2 = find(busch, 8)
+
+
+    elif (combinedCans[CanId][1] == "canadian"):
+
+
+        x1 = find(canadian, 6)
+        x2 = find(canadian, 8)
+        x3 = find(canadian, 12)
+
+
+    elif (combinedCans[CanId][1] == "coorsLight"):
+
+
+        x1 = find(coorsLight, 6)
+        x2 = find(coorsLight, 8)
+        x3 = find(coorsLight, 12)
+
+
+    elif (combinedCans[CanId][1] == "coors"):
+
+
+        x1 = find(coors, 6)
+
+
+    elif (combinedCans[CanId][1] == "heiniken"):
+        x1 = find(heiniken, 6)
+
+
+    elif (combinedCans[CanId][1] == "heyall"):
+        x1 = find(heyall, 6)
+
+
+    elif (combinedCans[CanId][1] == "KeystoneLight"):
+        x2 = find(KeystoneLight, 8)
+
+
+    elif (combinedCans[CanId][1] == "kokanee"):
+
+
+        x1 = find(kokanee, 6)
+        x2 = find(kokanee, 8)
+        x3 = find(kokanee, 12)
+
+
+    elif (combinedCans[CanId][1] == "lucky"):
+        x2 = find(lucky, 8)
+
+
+    elif (combinedCans[CanId][1] == "luckyExtra"):
+        x1 = find(luckyExtra, 6)
+
+
+    elif (combinedCans[CanId][1] == "oldmil"):
+        x2 = find(oldmil, 8)
+
+
+    elif (combinedCans[CanId][1] == "oldmilLight"):
+        x1 = find(oldmilLight, 6)
+
+
+    elif (combinedCans[CanId][1] == "pBR"):
+        x2 = find(pBR, 8)
+
+
+    elif (combinedCans[CanId][1] == "pilsner"):
+        x2 = find(pilsner, 8)
+
+
+    elif (combinedCans[CanId][1] == "stella"):
+        x1 = find(stella, 6)
+
+
+    elif (combinedCans[CanId][1] == "twistedTea"):
+        x1 = find(twistedTea, 6)
+
+
+    elif (combinedCans[CanId][1] == "ultra"):
+        x1 = find(ultra, 6)
+
+
+    if (cans12add > 0):
+        print(
+            f"Add {cans12add}, 12 cans of {combinedCans[CanId][1]}, with barcode: {x3}")
+
+
+    if (cans8add > 0):
+        print(
+            f"Add {cans8add}, 8 cans of {combinedCans[CanId][1]}, with barcode: {x2}")
+
+
+    if (cans6add > 0):
+        print(
+            f"Add {cans6add}, 6 cans of {combinedCans[CanId][1]}, with barcode: {x1}")
+
+
+    if (can1add > 0):
+        print(f"Add {can1add}, single cans of beer, with barcode: {single}")
+
+
+    canAmmountCalculated = (
+        combinedCans[CanId][0] * int(cansminus)) + (combinedCans[CanId][0] * int(cansminus12))
+    canAmmount = ((cans6add * 6) + (cans8add * 8) +
+                  (cans12add * 12) + (can1add))
+    canDif = (canAmmountCalculated - canAmmount)
+    if (canDif != 0):
+        user_input = input(
+            "Is the math Correct, the differnce is : {} (y/n): ".format(canDif))
+        print(f"The difference is: {canDif}")
+
+
+        if user_input == 'n' or 'N':
+            main()
+
+
+    if 'y' or 'Y' in user_input or (canDif == 0):
+        print(f"The difference is: {canDif}")
+
+
+        pyautogui.keyDown('alt')
+        time.sleep(0.3)
+        pyautogui.press('tab')
+        time.sleep(0.3)
+        pyautogui.keyUp('alt')
+        time.sleep(3)
+
+
+        if (combinedCans[CanId][0] == 36):
+            time.sleep(0.3)
+            pyautogui.write(str(CanId))
+            keyboard.send('tab')
+            time.sleep(0.3)
+            keyboard.send('-')
+            keyboard.write(str(cansminus))
+            keyboard.send('enter')
+            time.sleep(0.3)
+
+
+        elif (combinedCans[CanId][0] == 24):
+            time.sleep(0.3)
+            keyboard.write(str(CanId))
+            keyboard.send('tab')
+            time.sleep(0.3)
+            keyboard.send('-')
+            keyboard.write(str(cansminus))
+            keyboard.send('enter')
+            time.sleep(0.3)
+
+
+        elif (combinedCans[CanId][0] == 15):
+            time.sleep(0.3)
+            keyboard.write(str(CanId))
+            keyboard.send('tab')
+            time.sleep(0.3)
+            keyboard.send('-')
+            keyboard.write(str(cansminus))
+            keyboard.send('enter')
+            time.sleep(0.3)
+
+
+        elif (combinedCans[CanId][0] == 12):
+            time.sleep(0.3)
+            keyboard.write(str(CanId))
+            keyboard.send('tab')
+            time.sleep(0.3)
+            keyboard.send('-')
+            keyboard.write(str(cansminus12))
+            keyboard.send('enter')
+            time.sleep(0.3)
+
+
+        if (cans12add > 0):
+            time.sleep(0.3)
+            keyboard.write(str(x3))
+            keyboard.send('tab')
+            time.sleep(0.3)
+            keyboard.write(str(cans12add))
+            keyboard.send('enter')
+            time.sleep(0.3)
+
+
+        if (cans8add > 0):
+            time.sleep(0.3)
+            keyboard.write(str(x2))
+            keyboard.send('tab')
+            time.sleep(0.3)
+            keyboard.write(str(cans8add))
+            keyboard.send('enter')
+            time.sleep(0.3)
+
+
+        if (cans6add > 0):
+            time.sleep(0.3)
+            keyboard.write(str(x1))
+            keyboard.send('tab')
+            time.sleep(0.3)
+            keyboard.write(str(cans6add))
+            keyboard.send('enter')
+            time.sleep(0.3)
+
+
+        if (can1add > 0):
+            time.sleep(0.3)
+            keyboard.write(str(single))
+            keyboard.send('tab')
+            time.sleep(0.3)
+            keyboard.write(str(can1add))
+            keyboard.send('enter')
+            time.sleep(0.3)
+            time.sleep(5)
+
+
+    main()
+
+
+
+
+if __name__ == "__main__":
+    main()
+
+
